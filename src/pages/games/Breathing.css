@@ -1,0 +1,12 @@
+.breath-circle {
+  background: #dbeafe;
+  border-radius: 50%;
+  margin: 20px auto;
+  transition: 1.4s;
+}
+
+.breath-text {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 10px;
+}

@@ -1,0 +1,21 @@
+/* src/components/Topbar.css */
+.app-topbar{
+  height:64px; display:flex; align-items:center; justify-content:space-between;
+  padding:0 22px; background: white; border-bottom:1px solid rgba(14,30,60,0.04);
+  box-shadow: 0 6px 18px rgba(16,24,40,0.03);
+}
+
+.page-title{ font-weight:800; color:#1e3a8a; font-size:16px; }
+
+.right{ display:flex; align-items:center; gap:12px; }
+
+.search{
+  width:320px; padding:10px 12px; border-radius:10px; border:1px solid #e6edf6;
+  background:#f8fbff;
+}
+
+.icon-btn{
+  background:transparent;border:none; cursor:pointer; font-size:18px;
+}
+
+.profile-short img{ width:40px;height:40px;border-radius:8px; }

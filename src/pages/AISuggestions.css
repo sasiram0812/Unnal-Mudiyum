@@ -1,0 +1,55 @@
+.ai-container {
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+
+.ai-wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.ai-title {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.ai-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.refresh-btn {
+  display: block;
+  margin: 15px auto 25px;
+}
+
+/* Suggestion Cards */
+.suggestion-list {
+  margin-top: 20px;
+}
+
+.suggestion-card {
+  background: white;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-size: 17px;
+  color: #1e293b;
+  line-height: 1.4;
+  transition: 0.2s;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-4px);
+}
+
+.ai-footer {
+  text-align: center;
+  padding: 35px;
+  color: #6b7280;
+}

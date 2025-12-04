@@ -1,0 +1,261 @@
+.study-container {
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+
+.study-wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.study-title {
+  font-size: 32px;
+  color: #1e3a8a;
+  text-align: center;
+  font-weight: 900;
+}
+
+.study-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* TIMER CARD */
+.timer-card {
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.subject-select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  margin: 12px 0 20px;
+  font-size: 16px;
+}
+
+.timer-display {
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* TODAY SUMMARY */
+.today-card {
+  text-align: center;
+  padding: 25px;
+  margin-top: 20px;
+}
+
+.today-time {
+  font-size: 34px;
+  font-weight: 900;
+  margin-top: 10px;
+  color: #111;
+}
+
+/* CHART */
+.chart-card {
+  margin-top: 40px;
+  padding: 30px;
+}
+
+/* SESSION HISTORY */
+.session-card {
+  margin-top: 40px;
+  padding: 25px;
+}
+
+.session-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.session-item:hover {
+  transform: translateY(-4px);
+}
+
+/* FOOTER */
+.study-footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #6b7280;
+  margin-top: 40px;
+}
+.study-container {
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+
+/* Layout */
+.study-layout {
+  display: flex;
+  padding: 20px;
+  gap: 25px;
+}
+
+/* Sidebar */
+.study-sidebar {
+  width: 240px;
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.side-title {
+  color: #1e3a8a;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.subject-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #e7eaf3;
+  margin-bottom: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.subject-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+/* Goal meter */
+.goal-section {
+  margin-top: 20px;
+  background: #f8f9fb;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.goal-bar {
+  width: 100%;
+  height: 10px;
+  background: #e4e7ec;
+  border-radius: 20px;
+  margin: 8px 0;
+}
+
+.goal-progress {
+  height: 10px;
+  background: #2563eb;
+  border-radius: 20px;
+}
+
+.progress-text {
+  text-align: center;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Main */
+.study-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Timer */
+.timer-display {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin: 18px 0;
+}
+
+.timer-buttons button {
+  margin-right: 8px;
+}
+
+/* Today Summary */
+.today-card .today-time {
+  font-size: 42px;
+  font-weight: 900;
+  color: #1e40af;
+}
+
+/* Session History */
+.session-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+/* Notes */
+.notes-card textarea {
+  width: 100%;
+  height: 120px;
+  border-radius: 14px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  resize: none;
+  outline: none;
+}
+/* Add subject input */
+.add-subject-box {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.add-subject-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.add-subject-box button {
+  padding: 10px 14px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Subject row with delete */
+.subject-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delete-subject {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 18px;
+  cursor: pointer;
+}

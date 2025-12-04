@@ -1,0 +1,47 @@
+.stress-container {
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+
+.stress-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.stress-title {
+  font-size: 34px;
+  font-weight: 900;
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.stress-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #64748b;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.game-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  color: #1e3a8a;
+  transition: 0.25s;
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  background: #dbeafe;
+}

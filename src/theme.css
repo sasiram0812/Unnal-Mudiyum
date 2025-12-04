@@ -1,0 +1,122 @@
+/* GLOBAL THEME (APPLIES TO ALL PAGES) */
+
+body {
+  margin: 0;
+  background: #f4f7fb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* SHARED NAVBAR */
+.navbar {
+  background: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1e40af;
+}
+
+.nav-links a {
+  margin: 0 16px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1e40af;
+}
+
+.active {
+  color: #1e40af !important;
+}
+
+.login-btn {
+  padding: 8px 16px;
+  background: #2563eb;
+  color: white !important;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background: #1e3a8a;
+}
+
+/* BUTTON STYLES */
+.primary-btn {
+  padding: 14px 32px;
+  font-weight: bold;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.secondary-btn {
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: 2px solid #1e40af;
+  color: #1e40af;
+  background: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary-btn:hover {
+  transform: scale(1.04);
+}
+
+.secondary-btn:hover {
+  background: #eff6ff;
+}
+
+/* ANIMATIONS */
+.fade-in { animation: fadeIn 1.3s ease; }
+.slide-up { animation: slideUp 1.2s ease; }
+.slide-left { animation: slideLeft 1.2s ease; }
+.pop { animation: popIn 0.7s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(80px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* CARD STYLE */
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}

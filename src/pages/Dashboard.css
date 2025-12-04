@@ -1,0 +1,123 @@
+.dashboard-container {
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.dashboard-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Welcome */
+.welcome-section h1 {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.subtext {
+  color: #64748b;
+  margin-top: 5px;
+}
+
+/* Overview Cards */
+.overview-grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.overview-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.overview-card h2 {
+  margin-top: 8px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.sub {
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+/* Chart + Upcoming */
+.chart-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.chart-card,
+.upcoming-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* Upcoming */
+.upcoming-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #eff1f5;
+}
+
+.done-btn {
+  background: #22c55e;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+/* Quick Actions */
+.quick-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+}
+
+.quick-btn {
+  background: #e0e7ff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #1e3a8a;
+  transition: 0.2s;
+}
+
+.quick-btn:hover {
+  background: #c7d2fe;
+}
+
+/* Schedule */
+.schedule-card {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.schedule-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #eff1f5;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 25px;
+  padding: 15px;
+  color: #64748b;
+}

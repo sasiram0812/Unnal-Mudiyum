@@ -1,0 +1,271 @@
+/* Navbar container */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+  animation: slideDown 0.6s ease;
+}
+
+/* Inner layout */
+.navbar-inner {
+  max-width: 1150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+/* Logo */
+.logo a {
+  font-size: 26px;
+  color: #1e3a8a;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Links */
+.nav-link {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+
+/* Hover underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0%;
+  background: #2563eb;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link */
+.nav-link.active {
+  color: #2563eb;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Login button */
+.login-btn {
+  background: #2563eb;
+  padding: 8px 18px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Hamburger menu (mobile) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 28px;
+  height: 3px;
+  background: #1e293b;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.bar.open {
+  background: #2563eb;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: white;
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    flex-direction: column;
+    padding: 15px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Navbar Main */
+.navbar {
+  width: 100%;
+  background: white;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.navbar-inner {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* Logo */
+.logo a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #1e3a8a;
+  font-weight: 900;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Link Styles */
+.nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #334155;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: #1e3a8a;
+}
+
+.nav-link.active {
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+/* Login Btn */
+.login-btn {
+  padding: 8px 18px;
+  background: #1e3a8a;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Logout Btn */
+.logout-btn {
+  padding: 8px 18px;
+  background: #ef4444;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* User Email */
+.user-email {
+  padding: 6px 12px;
+  background: #e2e8f0;
+  border-radius: 8px;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 26px;
+  height: 3px;
+  background: #1e293b;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.bar.open {
+  background: #1e3a8a;
+}
+
+/* Mobile Mode */
+@media (max-width: 850px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 230px;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 8px 0;
+  }
+}
