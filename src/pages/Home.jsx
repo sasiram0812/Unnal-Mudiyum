@@ -104,7 +104,7 @@ if (loading) return <Loader />;
 
       {/* ABOUT SECTION */}
       <section className="about-section fade-in">
-        <h2>Why Choose Onal Mudiyum?</h2>
+        <h2>Why Choose Unnal Mudiyum?</h2>
         <p>
           Built specially for students who want to improve productivity and balance
           life. One platform for everything.
@@ -113,7 +113,7 @@ if (loading) return <Loader />;
 
       {/* FOOTER */}
       <footer className="footer">
-        © 2025 Onal Mudiyum — All Rights Reserved.
+        © 2025 Unnal Mudiyum — All Rights Reserved.
                 <h1></h1>
         Created by SASIRAM V
       </footer>

@@ -33,7 +33,7 @@ function StressRelief() {
       </div>
 
       <footer className="footer">
-        © 2025 Onal Mudiyum — Stress Relief
+        © 2025 Unnal Mudiyum — Stress Relief
                 <h1></h1>
         Created by SASIRAM V
       </footer>

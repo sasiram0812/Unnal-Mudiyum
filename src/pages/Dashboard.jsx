@@ -254,7 +254,7 @@ if (loading || pageLoading) {
         </div>
 
         <footer className="footer">
-          © 2025 Onal Mudiyum — Dashboard
+          © 2025 Unnal Mudiyum — Dashboard
                   <h1></h1>
         Created by SASIRAM V
         </footer>

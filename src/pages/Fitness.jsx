@@ -341,7 +341,7 @@ useEffect(() => {
       </div>
 
       <footer className="footer">
-        © 2025 Onal Mudiyum — Stay Healthy, Stay Sharp
+        © 2025 Unnal Mudiyum — Stay Healthy, Stay Sharp
                 <h1></h1>
         Created by SASIRAM V
       </footer>

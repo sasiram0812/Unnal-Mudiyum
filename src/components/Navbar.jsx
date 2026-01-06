@@ -27,7 +27,7 @@ function Navbar() {
 
         {/* Logo */}
         <div className="logo">
-          <Link to="/">Onal Mudiyum</Link>
+          <Link to="/">Unnal Mudiyum</Link>
         </div>
 
         {/* Mobile Menu */}

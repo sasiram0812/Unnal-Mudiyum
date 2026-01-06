@@ -194,7 +194,7 @@ useEffect(() => {
       </div>
 
       <footer className="footer">
-        © 2025 Onal Mudiyum — User Profile 
+        © 2025 Unnal Mudiyum — User Profile 
         <h1></h1>
         Created by SASIRAM V
       </footer>

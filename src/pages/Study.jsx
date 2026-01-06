@@ -362,7 +362,7 @@ useEffect(() => {
       </div>
 
       <footer className="study-footer">
-        © 2025 Onal Mudiyum — Study Better Every Day
+        © 2025 Unnal Mudiyum — Study Better Every Day
                 <h1></h1>
         Created by SASIRAM V
       </footer>
