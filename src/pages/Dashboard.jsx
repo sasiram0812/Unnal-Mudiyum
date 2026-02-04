@@ -118,9 +118,20 @@ function Dashboard() {
   }, [user]);
 
   // ---------------- LOADING CHECK ----------------
-  if (loading || pageLoading) {
-    return <div>Loading Dashboard...</div>;
-  }
+if (loading || pageLoading) {
+  return (
+    <div className="loader-container">
+      <div className="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>Loading Dashboard...</p>
+    </div>
+  );
+}
+
+
 
   // ---------------- UI (keep everything below exactly as is) ----------------
   return (
@@ -198,7 +209,7 @@ function Dashboard() {
         <footer className="footer">
           © 2025 Unnal Mudiyum — Dashboard
           <h1></h1>
-          Created by SASIRAM V
+          Created by <strong>SASIRAM V💙</strong>
         </footer>
       </div>
     </div>

@@ -115,7 +115,7 @@ if (loading) return <Loader />;
       <footer className="footer">
         © 2025 Unnal Mudiyum — All Rights Reserved.
                 <h1></h1>
-        Created by SASIRAM V
+        Created by <strong>SASIRAM V💙</strong>
       </footer>
     </div>
   );

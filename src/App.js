@@ -14,10 +14,7 @@ import Profile from "./pages/Profile";
 import StressRelief from "./pages/StressRelief";
 import AISuggestions from "./pages/AISuggestions";
 
-import BubblePop from "./pages/games/BubblePop";
-import MemoryGame from "./pages/games/MemoryGame";
-import Breathing from "./pages/games/Breathing";
-import ColorTherapy from "./pages/games/ColorTherapy";
+
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -127,11 +124,7 @@ function App() {
           }
         />
 
-        {/* PUBLIC GAME PAGES */}
-        <Route path="/bubble" element={<BubblePop />} />
-        <Route path="/memory" element={<MemoryGame />} />
-        <Route path="/breathing" element={<Breathing />} />
-        <Route path="/color" element={<ColorTherapy />} />
+       
 
       </Routes>
     </Router>

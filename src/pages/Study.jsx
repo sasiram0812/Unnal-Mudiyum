@@ -366,7 +366,7 @@ function Study() {
       <footer className="study-footer">
         © 2025 Unnal Mudiyum — Study Better Every Day
         <h1></h1>
-        Created by SASIRAM V
+        Created by <strong>SASIRAM V💙</strong>
       </footer>
     </div>
   );

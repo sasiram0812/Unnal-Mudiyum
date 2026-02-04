@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Navbar from "../components/Navbar";
 import "./AISuggestions.css";
 
 function AISuggestions() {
-  // Fake data — later connect to MongoDB or Firebase
+  // 🔹 TEMP DATA (later replace with Firebase)
   const studyHours = 2;
   const steps = 4500;
   const sleep = 5;
@@ -17,107 +17,85 @@ function AISuggestions() {
     "Every day is a fresh start.",
     "Do one thing today that your future self will thank you for.",
     "Believe in yourself — you got this!",
-    "Success is a set of small efforts repeated daily.",
+    "Success is built daily.",
     "Discipline beats motivation every time.",
   ];
 
   const [refreshKey, setRefreshKey] = useState(0);
-  const refresh = () => setRefreshKey(refreshKey + 1);
 
-  // ------------------ AI SUGGESTIONS ENGINE ------------------
-  const generateSuggestions = () => {
+  const refresh = () => setRefreshKey((k) => k + 1);
+
+  // 🧠 AI LOGIC (memoized for performance)
+  const suggestions = useMemo(() => {
     let list = [];
 
-    // STUDY SUGGESTIONS ---------------------
-    if (studyHours < 1) {
-      list.push("Try studying for at least 1 hour today — start with 25 minutes.");
-    } else if (studyHours < 2) {
-      list.push("Good start! Try reaching 2 hours today for strong progress.");
-    } else {
-      list.push("Great consistency! Maintain your study rhythm.");
-    }
+    // 📘 STUDY
+    if (studyHours < 1)
+      list.push("Study at least 25 minutes today.");
+    else if (studyHours < 2)
+      list.push("Good start! Aim for 2 hours.");
+    else
+      list.push("Great study consistency!");
 
-    // FITNESS SUGGESTIONS -------------------
-    if (steps < 3000) {
-      list.push("Take a 10-minute walk to refresh your mind.");
-    } else if (steps < 7000) {
-      list.push("You’re doing well! Try reaching 8,000 steps today.");
-    } else {
-      list.push("Amazing! You reached your step goal today.");
-    }
+    // 🏃 FITNESS
+    if (steps < 3000)
+      list.push("Take a short walk to refresh.");
+    else if (steps < 7000)
+      list.push("Try reaching 8,000 steps today.");
+    else
+      list.push("Excellent activity today!");
 
-    // SLEEP SUGGESTIONS ---------------------
-    if (sleep < 6) {
-      list.push("You slept less than 6 hours — try sleeping early today.");
-    } else if (sleep < 8) {
-      list.push("Good! Aim for a full 8-hour sleep tonight.");
-    } else {
-      list.push("Great sleep! Keep a consistent sleep schedule.");
-    }
+    // 😴 SLEEP
+    if (sleep < 6)
+      list.push("Low sleep detected — sleep earlier tonight.");
+    else if (sleep < 8)
+      list.push("Aim for a full 8-hour sleep.");
+    else
+      list.push("Great sleep routine!");
 
-    // TASK SUGGESTIONS ----------------------
-    if (tasksPending > 5) {
-      list.push("Too many pending tasks — sort them by priority.");
-    } else if (tasksPending > 2) {
-      list.push("Finish 1–2 tasks right now to reduce stress.");
-    } else if (tasksPending === 0) {
-      list.push("Great! Add at least 3 small goals for today.");
-    }
+    // 📝 TASKS
+    if (tasksPending > 5)
+      list.push("Too many tasks — prioritize important ones.");
+    else if (tasksPending > 2)
+      list.push("Finish 1–2 tasks now.");
+    else if (tasksPending === 0)
+      list.push("Add small goals for tomorrow.");
 
-    // MOOD BASED ----------------------------
-    if (mood === "😡") {
-      list.push("You seem stressed — try the Breathing Exercise in Stress Relief Page.");
-    } else if (mood === "😢") {
-      list.push("Take a short walk or talk to a friend — it might help.");
-    } else if (mood === "😊") {
-      list.push("Great energy! Use this mood to finish important tasks.");
-    } else {
-      list.push("You're neutral — take 5 minutes to stretch your body.");
-    }
+    // 😊 MOOD
+    if (mood === "😡")
+      list.push("Try breathing exercise from Stress Relief.");
+    else if (mood === "😢")
+      list.push("Talk to a friend or take a walk.");
+    else if (mood === "😊")
+      list.push("Use this positive energy productively.");
+    else
+      list.push("Stretch for 5 minutes to reset your mood.");
 
-    // ADVANCED ANALYSIS ---------------------
-    if (tasksCompleted === 0 && studyHours === 0) {
+    // 🧠 SMART COMBINATIONS
+    if (tasksCompleted === 0 && studyHours === 0)
       list.push("Start small: one task or 15 minutes of study.");
-    }
 
-    if (sleep < 5 && mood !== "😊") {
-      list.push("Low sleep affects mood — schedule a power nap today.");
-    }
+    if (sleep < 5 && mood !== "😊")
+      list.push("Low sleep affects mood — take a short nap.");
 
-    if (studyHours > 2 && steps < 3000) {
-      list.push("You studied well — now move your body a bit.");
-    }
+    if (studyHours > 2 && steps < 3000)
+      list.push("Balance study with light movement.");
 
-    if (steps > 7000 && studyHours === 0) {
-      list.push("Good activity! Balance your day with some study time.");
-    }
+    // 🌱 HEALTH HABITS
+    list.push("Drink 2 glasses of water now.");
+    list.push("Avoid phone while studying.");
+    list.push("Do a quick stretch every hour.");
+    list.push("Plan tomorrow before sleeping.");
 
-    if (sleep > 8 && studyHours < 1) {
-      list.push("Well rested! Try focusing on studies next.");
-    }
-
-    if (tasksPending > 5 && mood === "😡") {
-      list.push("High tasks & low mood — break tasks into small chunks.");
-    }
-
-    // Extra Realistic AI Checks --------------------
-    list.push("Drink 2–3 glasses of water now.");
-    list.push("Avoid mobile phone while studying.");
-    list.push("Do a 2-minute stretch every hour.");
-    list.push("Review your tasks at night and plan ahead.");
-    list.push("Focus on ONE important task instead of many.");
-    list.push("Avoid studying late night after 12AM.");
-    list.push("Track your progress daily to stay motivated.");
-
-    // Random quote
+    // 💬 MOTIVATION
     list.push(
-      motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)]
+      motivationalQuotes[
+        Math.floor(Math.random() * motivationalQuotes.length)
+      ]
     );
 
     return list;
-  };
-
-  const suggestions = generateSuggestions();
+  }, [refreshKey]); // only changes on refresh
 
   return (
     <div className="ai-container">
@@ -126,7 +104,7 @@ function AISuggestions() {
       <div className="ai-wrapper fade-in">
         <h1 className="ai-title">🧠 AI Personal Suggestions</h1>
         <p className="ai-subtitle">
-          Personalized tips generated based on your study, tasks, sleep, fitness & mood.
+          Smart tips based on your daily activity & habits.
         </p>
 
         <button className="primary-btn refresh-btn" onClick={refresh}>
@@ -143,7 +121,7 @@ function AISuggestions() {
       </div>
 
       <footer className="ai-footer">
-        © 2025 Onal Mudiyum — Your Smart AI Helper
+        © 2025 Onal Mudiyum — Smart Productivity Assistant
       </footer>
     </div>
   );

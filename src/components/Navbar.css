@@ -21,12 +21,19 @@
 }
 
 /* Logo */
-.logo a {
-  font-size: 26px;
-  color: #1e3a8a;
-  font-weight: 900;
-  text-decoration: none;
+.logo {
+  position: fixed;        /* sticks to corner */
+  top: 10px;
+  left: 60px;
 }
+
+.logo a {
+  font-size: 12px;        /* very small text */
+  font-weight: 600;
+  text-decoration: none;
+  color: #2e7d32;         /* green shade (you can change) */
+}
+
 
 /* Navigation Links */
 .nav-links {
